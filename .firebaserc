@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "business-app-d90ca": {
+      "hosting": {
+        "BusinessApp": [
+          "business-app-d90ca"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "business-app-d90ca"
+  }
+}
