@@ -50,12 +50,12 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     MatDatepickerModule,
     MatNativeDateModule,
     FormsModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
-    AngularFireModule.initializeApp(environment.firebase)
-    // AngularFirestoreModule
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule
   ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: 'de'},

@@ -13,7 +13,7 @@ export class DialogAddUserComponent {
   user = new User;
   birthDate: Date;
 
-  constructor(private firestore: AngularFirestore) {}
+  constructor(public firestore: AngularFirestore) {}
 
   saveUser() {
     this.user.birthDate = this.birthDate.getTime();
