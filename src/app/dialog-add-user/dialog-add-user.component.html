@@ -5,21 +5,29 @@
     <div class="formFieldContainer">
         <mat-form-field class="formField mr-16" appearance="outline">
             <mat-label>First name</mat-label>
-            <input [disabled]="loading" [(ngModel)] = "user.firstName" matInput placeholder="User name" />
+            <input [disabled]="loading" [(ngModel)] = "user.firstName" matInput placeholder="User's first name" />
             <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
             <!-- <mat-hint>Please enter first name</mat-hint> -->
           </mat-form-field>
           <mat-form-field class="formField" appearance="outline">
             <mat-label>Last name</mat-label>
-            <input [disabled]="loading" [(ngModel)] = "user.lastName" matInput placeholder="User name" />
+            <input [disabled]="loading" [(ngModel)] = "user.lastName" matInput placeholder="User's last name" />
             <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
             <!-- <mat-hint>Please enter last name</mat-hint> -->
           </mat-form-field>
     </div>
+
+    <div class="formFieldContainer">
+      <mat-form-field class="formField fullWidth mr-16" appearance="outline">
+          <mat-label>E-Mail</mat-label>
+          <input [disabled]="loading" [(ngModel)] = "user.email" matInput placeholder="User's mail" />
+        </mat-form-field>
+  </div>
+
     <div class="formFieldContainer">
         <mat-form-field class="formField fullWidth mr-16" appearance="outline">
             <mat-label>Birth date</mat-label>
-            <input [disabled]="loading" [(ngModel)] = "birthDate" matInput placeholder="User name" [matDatepicker]="picker1">
+            <input [disabled]="loading" [(ngModel)] = "birthDate" matInput placeholder="User's birthdate" [matDatepicker]="picker1">
             <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
             <mat-datepicker #picker1></mat-datepicker>
             <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
@@ -44,7 +52,8 @@
   </div>
 </div>
 <div mat-dialog-actions>
-  <button mat-button mat-dialog-close>Cancel</button>
+  <!-- <button mat-button mat-dialog-close>Cancel</button> -->
+  <button mat-button (click)="dialogRef.close()">Cancel</button>
   <button mat-button [disabled]="loading" (click)="saveUser()" cdkFocusInitial>Save</button>
 </div>
 
