@@ -17,3 +17,9 @@ body
 .fullWidth {
     width: 100%;
 }
+
+:root {
+    --userActive: #42D690;
+    --userInactive: #FF0040;
+    --userPending: #F8B958;
+}

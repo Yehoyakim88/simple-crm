@@ -10,6 +10,12 @@
     width: 300px;
 }
 
+.sideNavLogoImage {
+    height: -webkit-fill-available;
+    // width:  -webkit-fill-available;
+    object-fit: contain;
+}
+
 .logoContainer {
     border-bottom: 1px solid rgba(0, 0, 0, 0.04);
     padding-left: 16px;
@@ -17,7 +23,7 @@
     min-height: 56px !important;
     height: 56px !important;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .menuItems {
@@ -52,4 +58,5 @@ mat-toolbar, mat-toolbar-row {
 .routerContainer {
     padding-top: 16px;
     padding-left: 56px;
+    padding-right: 56px;
 }

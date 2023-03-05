@@ -25,6 +25,11 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -55,7 +60,12 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    MatProgressBarModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatChipsModule,
+    MatCardModule
   ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: 'de'},

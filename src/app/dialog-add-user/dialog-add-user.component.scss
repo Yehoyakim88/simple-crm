@@ -1,3 +1,7 @@
+.dialogContainer {
+    position: relative;
+}
+
 .formField {
     margin-top: 16px;
 }
@@ -5,4 +9,9 @@
 .formFieldContainer {
     display: flex;
     // flex-direction: column;
+}
+
+.dialogProgressbar {
+    position: absolute;
+    left: 0px;
 }
