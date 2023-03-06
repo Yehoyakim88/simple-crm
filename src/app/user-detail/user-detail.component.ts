@@ -31,7 +31,7 @@ export class UserDetailComponent implements OnInit {
                                                   // {path: 'user/:id', component: UserDetailComponent}
       console.log('GOT IT ', this.userId);
       this.getUser();
-  })
+  });
   }
 
   getUser() {
@@ -48,12 +48,13 @@ export class UserDetailComponent implements OnInit {
 
   editUserDetails() {
     const dialog = this.dialog.open(DialogEditUserComponent);
-    dialog.componentInstance.user = this.currentUser;
+    dialog.componentInstance.user = new User(this.currentUser.toJSON());
+    dialog.componentInstance.userId = this.userId;
   }
 
   editAddress() {
     const dialog = this.dialog.open(DialogEditAddressComponent);
-    dialog.componentInstance.user = this.currentUser;
-    
+    dialog.componentInstance.user = new User(this.currentUser.toJSON());
+    dialog.componentInstance.userId = this.userId;
   }
 }

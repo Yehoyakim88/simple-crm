@@ -1,11 +1,8 @@
 <div class="dialogContainer">
-    <mat-progress-bar
-      *ngIf="loading"
-      class="dialogProgressbar"
-      mode="indeterminate"
-    ></mat-progress-bar>
+    <mat-progress-bar *ngIf="loading" class="dialogProgressbar" mode="indeterminate"></mat-progress-bar>
     <h1 mat-dialog-title>Edit Address</h1>
     <div mat-dialog-content>
+
       <div class="formFieldContainer">
         <mat-form-field class="formField fullWidth mr-16 mt-16px" appearance="outline">
           <mat-label>Street + Nr.</mat-label>
@@ -17,37 +14,21 @@
           />
         </mat-form-field>
       </div>
+
       <div class="formFieldContainer">
         <mat-form-field class="formField mr-16" appearance="outline">
           <mat-label>City</mat-label>
-          <input
-            [disabled]="loading"
-            [(ngModel)]="user.city"
-            matInput
-            placeholder="e.g. Berlin"
-          />
+          <input [disabled]="loading" [(ngModel)]="user.city" matInput placeholder="e.g. Berlin"/>
         </mat-form-field>
         <mat-form-field class="formField mr-16" appearance="outline">
           <mat-label>Zip code</mat-label>
-          <input
-            [disabled]="loading"
-            [(ngModel)]="user.zipCode"
-            matInput
-            placeholder="e.g. 12456"
-          />
+          <input [disabled]="loading" [(ngModel)]="user.zipCode" matInput placeholder="e.g. 12456"/>
         </mat-form-field>
       </div>
+
     </div>
     <div mat-dialog-actions>
-      <!-- <button mat-button mat-dialog-close>Cancel</button> -->
       <button mat-button (click)="dialogRef.close()">Cancel</button>
-      <button
-        mat-button
-        [disabled]="loading"
-        (click)="saveUser()"
-        cdkFocusInitial
-      >
-        Save
-      </button>
+      <button mat-button [disabled]="loading" (click)="saveUser()" cdkFocusInitial>Save</button>
     </div>
   </div>

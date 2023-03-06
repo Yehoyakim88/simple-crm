@@ -2,16 +2,15 @@
     position: relative;
 }
 
+.dialogProgressbar {
+    position: absolute;
+    left: 0px;
+}
+
 .formField {
     margin-top: 16px;
 }
 
 .formFieldContainer {
     display: flex;
-    // flex-direction: column;
-}
-
-.dialogProgressbar {
-    position: absolute;
-    left: 0px;
 }
