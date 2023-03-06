@@ -1,0 +1,28 @@
+<mat-card class="userProfileHeader">
+  <img class="profileImage" src="./assets/img/avatar.png" />
+  <div class="userDetails mr-48px">
+    <h2>{{ currentUser.firstName }} {{ currentUser.lastName }}</h2>
+    {{ currentUser.email }}
+  </div>
+  <div class="userOptions">
+    <div class="flex-direction-column">
+      <span class="material-icons">qr_code_2</span>
+      QR-Code
+    </div>
+    <div class="flex-direction-column"></div>
+      <span class="material-icons">edit</span>
+      Bearbeiten
+    </div>
+    <div class="flex-direction-column">
+      <span class="material-icons">share</span>
+      Weiterleiten
+    </div>
+  </div>
+</mat-card>
+
+<mat-card class="mt-32px padding-8px">
+  <mat-card-title>Address</mat-card-title>
+  {{ currentUser.street }} <br>
+  {{ currentUser.zipCode }} {{ currentUser.city }}
+  <mat-card-content> </mat-card-content>
+</mat-card>
