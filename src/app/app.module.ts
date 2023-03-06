@@ -31,6 +31,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatCardModule } from '@angular/material/card';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { DialogEditAddressComponent } from './dialog-edit-address/dialog-edit-address.component';
+import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
+
 
 
 @NgModule({
@@ -40,7 +44,9 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     UserComponent,
     ContactComponent,
     DialogAddUserComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    DialogEditAddressComponent,
+    DialogEditUserComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +73,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     MatTableModule,
     MatPaginatorModule,
     MatChipsModule,
-    MatCardModule
+    MatCardModule,
+    MatMenuModule
   ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: 'de'},

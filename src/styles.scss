@@ -14,6 +14,14 @@ body
     margin-top: 32px;
 }
 
+.mb-8px {
+    margin-bottom: 8px !important;
+}
+
+.mt-16px {
+    margin-top: 16px !important;
+}
+
 .mr-16 {
     margin-right: 16px;
 }
@@ -26,6 +34,12 @@ body
     padding: 8px;
 }
 
+.pinRightUpperCorner {
+    position: absolute !important;
+    right: 16px !important;
+    top: 16px !important;
+}
+
 .fullWidth {
     width: 100%;
 }
@@ -33,6 +47,10 @@ body
 .flex-direction-column {
     display: flex;
     flex-direction: column;
+}
+
+.align-items-center {
+    align-items: center;
 }
 
 :root {

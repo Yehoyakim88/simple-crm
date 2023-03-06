@@ -13,6 +13,11 @@
     }
 }
 
+.userProfileHeaderSubcontainer {
+    display: flex;
+    justify-content: space-between;
+}
+
 .userDetails {
     margin-left: 32px;
     display: flex;
@@ -27,8 +32,18 @@
 }
 
 .userOptions {
+    position: absolute;
+    right: 24px !important;
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    justify-self: end;
+}
+
+.userOption {
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.25);
+    }
 }
