@@ -1,0 +1,260 @@
+.contactContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactSubcontainer {
+    margin-top: var(--height-menu);
+    margin-left: 28px;
+    margin-right: 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactHeader {
+    z-index: 2;
+    position: relative;
+    left: -28px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contactHeaderLine {
+    width: 56px;
+    height: 0px;
+    border: 3px solid #3F50B5;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  
+  .contactHeaderText {
+    // margin-left: 50px;
+    width: 376px;
+    height: var(--height-contactHeaderText);
+    font-family: "Poppins Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 120%;
+    text-align: center;
+    color: #3F50B5;
+    z-index: 2;
+  }
+  
+  .contactSubHeaderText {
+    display: flex;
+    font-family: "Poppins Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    color: #3F50B5;
+    z-index: 2;
+    // margin-left: 66px;
+  }
+  
+  .contactMainSection {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 32px;
+    // margin-left: 6.94vw;
+  }
+  
+  .contactDescriptions {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 32.847vw;
+  }
+  
+  .contactDescParagraph {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    z-index: 2;
+    color: #3F50B5;
+  }
+  
+  .invitationContainer {
+    display: flex;
+  }
+  
+  .contactInvitationText {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    z-index: 2;
+  }
+  
+  .textBold {
+    font-family: "Poppins Bold";
+    font-weight: 400;
+    margin-left: 6px;
+    z-index: 2;
+  }
+  
+  .contactInputs {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+    
+  }
+  
+  .contactInputsForm {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .singleLineInput {
+    padding: 7.5px 25px;
+    width: 39.375vw;
+    height: 35px;
+    margin-bottom: 35px;
+    background: #141d2f;
+    border: 1px solid #4b47ff;
+    border-radius: 10px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #ffffff;
+    z-index: 2;
+    &:hover {
+      border: 1px solid #00bee8;
+    }
+  }
+  
+  .multiLineInput {
+    padding: 15px 25px;
+    width: 39.375vw;
+    height: 202px;
+    margin-bottom: 35px;
+    background: #141d2f;
+    border: 1px solid #4b47ff;
+    border-radius: 10px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #ffffff;
+    z-index: 2;
+    &:hover {
+      border: 1px solid #00bee8;
+    }
+  }
+  
+  .sendMessageButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px 30px;
+    margin-bottom: 102px;
+    width: 253px;
+    height: 58px;
+    background: #00bee8;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: 0;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+    color: #ffffff;
+    z-index: 2;
+  
+    &:hover {
+      cursor: pointer;
+      background: #4b47ff;
+      transition: 0.3s ease-in-out;
+      transform: scale(1.2);
+    }
+  }
+  
+  .d-none {
+    display: none !important;
+  }
+
+  @media (max-width: 880px) {
+    .contactMainSection {
+      flex-direction: column !important;
+      margin-left: 0px !important;
+    }
+
+    .contactDescriptions {
+      margin-left: 90px !important;
+      width: -webkit-fill-available !important;
+    }
+
+    .contactInputs {
+      margin-left: 0px !important;
+      align-self: center;
+      margin-top: 32px;
+      width: fit-content;
+    }
+
+    .singleLineInput {
+      width: 50vw;
+    }
+
+    .multiLineInput {
+      width: 50vw;
+    }
+
+    .sendMessageButton {
+      margin-bottom: 0px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .contactHeaderText {
+      font-size: 45px !important;
+    }
+
+    .contactSubHeaderText {
+      font-size: 23px !important;
+      margin-top: 20px !important;
+    }
+    
+    .contactMainSection {
+      flex-direction: column !important;
+      margin-left: unset !important;
+    }
+
+    .contactDescriptions {
+      width: unset !important;
+    }
+
+    .contactDescParagraph {
+      margin-top: 25px !important;
+    }
+
+    .contactInputs {
+      margin-top: 45px !important;
+      width: 100%;
+      margin-left: 0px !important;
+    }
+
+    .singleLineInput {
+      width: -webkit-fill-available !important;
+    }
+
+    .multiLineInput {
+      width: -webkit-fill-available !important;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .contactHeaderText {
+      width: unset !important;
+    }
+  }

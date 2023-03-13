@@ -1,1 +1,37 @@
-<p>contact works!</p>
+<mat-card>
+    <mat-card-content>
+        <div id="contact" class="contactContent">
+            <div class="contactSubcontainer">
+                <div class="contactHeader">
+                    <span class="contactHeaderLine"></span>
+                    <span class="contactHeaderText">Contact</span>
+                </div>
+                <div class="contactMainSection">
+                    <div class="contactDescriptions">
+                      <span class="contactSubHeaderText">Got a problem to solve?</span>
+                      <p class="contactDescParagraph">
+                        Contact me through this form, I am interested in hearing you, knowing
+                        your ideas and contributing to your projects with my work.
+                      </p>
+                      <div class="invitationContainer">
+                        <span class="contactInvitationText">Need a Frontend developer? <b>Contact me!</b></span>
+                      </div>
+                      
+                    </div>
+                    <div class="contactInputs">
+                        <form action="./../../assets/send_mail.php" method="POST" class="contactInputsForm">
+                            <input class="singleLineInput" type="text" name="name" placeholder="Your name" required/>
+                            <input class="singleLineInput" type="text" name="mail" placeholder="Your email" required/>
+                            <textarea class="multiLineInput" rows="2" cols="20" name="message" placeholder="Your message" required></textarea>
+                            <input type="submit" class="sendMessageButton" value="Send message :)"
+                            #tooltip="matTooltip"
+                            matTooltip="Just demo without functionality"
+                            [matTooltipPosition]="position.value"/>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

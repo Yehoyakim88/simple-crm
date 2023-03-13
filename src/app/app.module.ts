@@ -34,6 +34,12 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { DialogEditAddressComponent } from './dialog-edit-address/dialog-edit-address.component';
 import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ContactService } from './contact.service';
+import { EmailService } from './email.service';
+
 
 
 
@@ -46,7 +52,8 @@ import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.com
     DialogAddUserComponent,
     UserDetailComponent,
     DialogEditAddressComponent,
-    DialogEditUserComponent
+    DialogEditUserComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
@@ -74,10 +81,13 @@ import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.com
     MatPaginatorModule,
     MatChipsModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: 'de'},
+    EmailService
   ],
   bootstrap: [AppComponent]
 })

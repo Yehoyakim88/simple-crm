@@ -27,6 +27,20 @@
     align-items: flex-start;
 }
 
+.dashboardLink {
+    display: flex !important;
+    align-items: center !important;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:visited {
+        color: unset !important; 
+    }
+}
+
 .menuItems {
     list-style-type: none;
     padding: 0px;
