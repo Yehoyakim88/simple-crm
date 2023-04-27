@@ -14,7 +14,8 @@ import { ContactService } from '../contact.service';
 })
 export class ContactFormComponent implements OnInit {
   FormData: FormGroup;
-  constructor(private builder: FormBuilder, private contact: ContactService) {}
+  constructor(private builder: FormBuilder, private contact: ContactService) { }
+  
 
   ngOnInit() {
     this.FormData = this.builder.group({

@@ -10,7 +10,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
   styleUrls: ['./dialog-edit-user.component.scss']
 })
 export class DialogEditUserComponent implements OnInit {
-  user: User;
+  user: User = new User();
   userId: string;
   birthDate: Date;
   loading: boolean = false;
@@ -35,6 +35,4 @@ export class DialogEditUserComponent implements OnInit {
       this.dialogRef.close();
     });
   }
-
-  
 }
